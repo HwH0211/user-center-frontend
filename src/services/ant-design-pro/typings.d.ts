@@ -12,6 +12,7 @@ declare namespace API {
     email:string;
     userStatus:number;
     userRole:number;
+    planetCode:string;
     createTime:Date;
   };
 
@@ -42,6 +43,15 @@ declare namespace API {
     createdAt?: string;
     progress?: number;
   };
+  /**
+   * 通用返回类
+   */
+  type BaseResponse<T> = {
+    code:number,
+    data:T,
+    message:string,
+    description:string,
+  }
 
   type RuleList = {
     data?: RuleListItem[];
@@ -66,6 +76,7 @@ declare namespace API {
     userAccount?: string;
     userPassword?: string;
     checkPassword?: string;
+    planetCode?:string;
     type?: string;
   };
 
